@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Aditya Teknik | Service AC Bekasi</title>
+
+    <meta
+      name="description"
+      content="Service AC, kulkas dan mesin cuci Bekasi. Teknisi profesional, respon cepat 24 jam. Hubungi Aditya Teknik sekarang."
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Inter, system-ui;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: #0f172a;
+        color: white;
+        line-height: 1.6;
+      }
+
+      /* CONTAINER */
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      /* NAVBAR */
+
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 18px 0;
+        backdrop-filter: blur(12px);
+        background: rgba(15, 23, 42, 0.6);
+        z-index: 1000;
+      }
+
+      .nav-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-weight: 700;
+        font-size: 20px;
+      }
+
+      .nav-menu {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+      }
+
+      .nav-menu a {
+        text-decoration: none;
+        color: white;
+        opacity: 0.9;
+      }
+
+      .cta {
+        background: #22c55e;
+        padding: 10px 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+      }
+
+      /* HERO */
+
+      .hero {
+        height: 100vh;
+
+        background:
+          linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)),
+          url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1600&q=80');
+
+        background-size: cover;
+        background-position: center;
+
+        display: flex;
+        align-items: center;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+      }
+
+      .hero p {
+        opacity: 0.9;
+        margin-bottom: 30px;
+      }
+
+      .hero-buttons {
+        display: flex;
+        gap: 15px;
+      }
+
+      .btn-primary {
+        background: #22c55e;
+        padding: 14px 26px;
+        border-radius: 8px;
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+      }
+
+      .btn-secondary {
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 14px 26px;
+        border-radius: 8px;
+        text-decoration: none;
+        color: white;
+      }
+
+      /* STATS */
+
+      .stats {
+        margin-top: 40px;
+        display: flex;
+        gap: 40px;
+      }
+
+      .stat h3 {
+        font-size: 26px;
+        color: #22c55e;
+      }
+
+      /* SECTIONS */
+
+      section {
+        padding: 90px 0;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 34px;
+        margin-bottom: 60px;
+      }
+
+      /* FEATURES */
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 30px;
+      }
+
+      .feature-card {
+        background: #1e293b;
+        padding: 35px;
+        border-radius: 12px;
+        transition: 0.3s;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-6px);
+      }
+
+      .feature-card i {
+        font-size: 30px;
+        margin-bottom: 15px;
+        color: #22c55e;
+      }
+
+      /* GALLERY */
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+      }
+
+      .gallery img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      /* TESTIMONIAL */
+
+      .testimonials {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+      }
+
+      .testimonial {
+        background: #1e293b;
+        padding: 25px;
+        border-radius: 10px;
+      }
+
+      .stars {
+        color: #facc15;
+        margin-bottom: 10px;
+      }
+
+      /* CONTACT */
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+
+      .contact-card {
+        background: #1e293b;
+        padding: 30px;
+        border-radius: 10px;
+      }
+
+      /* MAP */
+
+      .map iframe {
+        width: 100%;
+        height: 350px;
+        border-radius: 10px;
+        border: none;
+      }
+
+      /* FOOTER */
+
+      footer {
+        background: #020617;
+        padding: 40px 0;
+        margin-top: 80px;
+      }
+
+      .footer-grid {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+
+      /* FLOAT WA */
+
+      .whatsapp {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        width: 60px;
+        height: 60px;
+        background: #22c55e;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        color: white;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+        }
+        70% {
+          box-shadow: 0 0 0 20px rgba(34, 197, 94, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+        }
+      }
+
+      /* MOBILE */
+
+      @media (max-width: 900px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero h1 {
+          font-size: 36px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+      <div class="container nav-inner">
+        <div class="logo">Aditya Teknik</div>
+
+        <div class="nav-menu">
+          <a href="#">Home</a>
+          <a href="#about">About</a>
+          <a href="#layanan">Layanan</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+
+          <a class="cta" href="https://wa.me/6282284974426">
+            <i class="fab fa-whatsapp"></i> Hubungi
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="hero">
+      <div class="container hero-grid">
+        <div data-aos="fade-up">
+          <h1>Service AC Profesional di Bekasi</h1>
+
+          <p>
+            Perbaikan AC, kulkas dan mesin cuci dengan teknisi berpengalaman.
+            Respon cepat, harga transparan, dan melayani 24 jam.
+          </p>
+
+          <div class="hero-buttons">
+            <a class="btn-primary" href="https://wa.me/6282284974426">
+              <i class="fab fa-whatsapp"></i> Chat WhatsApp
+            </a>
+
+            <a class="btn-secondary" href="#layanan"> Lihat Layanan </a>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <h3>4.9★</h3>
+              <p>Google Rating</p>
+            </div>
+
+            <div class="stat">
+              <h3>40+</h3>
+              <p>Review Pelanggan</p>
+            </div>
+
+            <div class="stat">
+              <h3>24 Jam</h3>
+              <p>Layanan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+
+    <section id="layanan">
+      <div class="container">
+        <h2 class="section-title">Layanan Kami</h2>
+
+        <div class="features">
+          <div class="feature-card" data-aos="fade-up">
+            <i class="fa-solid fa-snowflake"></i>
+            <h3>Service AC</h3>
+            <p>Cuci AC, isi freon, AC tidak dingin dan instalasi AC.</p>
+          </div>
+
+          <div class="feature-card" data-aos="fade-up">
+            <i class="fa-solid fa-kitchen-set"></i>
+            <h3>Service Kulkas</h3>
+            <p>Kulkas tidak dingin, bocor freon dan perbaikan kompresor.</p>
+          </div>
+
+          <div class="feature-card" data-aos="fade-up">
+            <i class="fa-solid fa-water"></i>
+            <h3>Service Mesin Cuci</h3>
+            <p>Perbaikan mesin cuci berbagai merk dan tipe.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+
+    <section id="gallery">
+      <div class="container">
+        <h2 class="section-title">Gallery Pekerjaan</h2>
+
+        <div class="gallery">
+          <img
+            src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e"
+          />
+
+          <img
+            src="https://images.unsplash.com/photo-1601979031925-424e53b6caaa"
+          />
+
+          <img
+            src="https://images.unsplash.com/photo-1598300053653-55c57c2f6c5e"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIAL -->
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">Testimoni Pelanggan</h2>
+
+        <div class="testimonials">
+          <div class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p>Teknisi datang cepat dan AC langsung dingin lagi.</p>
+            <strong>Budi - Bekasi</strong>
+          </div>
+
+          <div class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p>Pelayanan sangat profesional dan harga masuk akal.</p>
+            <strong>Rina - Bekasi</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+      <div class="container contact-grid">
+        <div class="contact-card">
+          <h3>Kontak</h3>
+
+          <p>
+            <i class="fa-solid fa-location-dot"></i> Harapan Jaya Bekasi Utara
+          </p>
+          <p><i class="fa-solid fa-phone"></i> 0822-8497-4426</p>
+          <p><i class="fa-solid fa-clock"></i> Open 24 Hours</p>
+
+          <br />
+
+          <a class="btn-primary" href="https://wa.me/6282284974426">
+            Chat WhatsApp
+          </a>
+        </div>
+
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.3545191800918!2d106.98891577579889!3d-6.216891993771069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698d000d05f039%3A0xf78d5204df75c5ff!2sAditya%20teknik%20(%20service%20ac%20kulkas%20dan%20mesin%20cuci%20)!5e0!3m2!1sen!2sid!4v1773286737084!5m2!1sen!2sid"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container footer-grid">
+        <div>
+          <h3>Aditya Teknik</h3>
+          <p>Service AC, kulkas dan mesin cuci profesional di Bekasi.</p>
+        </div>
+
+        <div>
+          <p>© 2026 All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+
+    <a class="whatsapp" href="https://wa.me/6282284974426">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+      AOS.init({ duration: 1000, once: true });
+    </script>
+  </body>
+</html>
